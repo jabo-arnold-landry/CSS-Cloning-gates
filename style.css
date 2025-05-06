@@ -5,22 +5,35 @@
   --primary-font: 14px;
   --font-family: Centra No2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, sans-serif;
+  --card-background: #f7f7f8;
+  --card-border-clr: #dfe0e4;
+  --egds-type-style-headline-font-name: "Centra No2", "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+header {
+  container-type: inline-size;
+}
 nav {
   background-color: var(--whites-clr);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 20rem;
+  gap: 3rem;
   margin: 1rem 0;
 }
+@container (width < 784px) {
+  .links {
+    flex-direction: column;
+  }
+}
+
 .links {
-  display: inline-flex;
+  display: flex;
   gap: 13px;
   transition: all 0.3ms 0.1ms ease-in-out;
   & a {
@@ -44,24 +57,62 @@ nav {
 svg {
   width: 20px;
 }
-
 .hero-section {
-  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://forever.travel-assets.com/flex/flexmanager/images/2025/03/24/VRBO_APFT2_BARCELONA_THERIN_HOUSE_2_4605_1.png?impolicy=fcrop&amp;w=1920&amp;h=580&amp;q=medium");
   height: 100vh;
-  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2025/03/24/VRBO_APFT2_BARCELONA_THERIN_HOUSE_2_4605_1.png?impolicy=fcrop&amp;w=1920&amp;h=580&amp;q=medium");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: fixed;
-  & .overlay {
-    /* max-width: 98rem;
-    margin: 0 auto;
-    height: 100vh; */
-    background-color: black;
-    opacity: 1;
-    position: fixed;
-    top: 0;
+  position: relative;
+}
+.container {
+  transform: translate(0%, 280%);
+  container-type: inline-size;
+}
+.container h1 {
+  margin: 1px 2rem;
+  color: var(--whites-clr);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.7rem);
+  color: var(--card-border-clr);
+}
+.destination {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  margin: 0 2rem;
+  padding: 1rem;
+
+  & svg {
+    width: 40px;
   }
 }
-.destinations {
-  columns: var(--whites-clr);
+.destination .search {
+  display: flex;
+  gap: 2rem;
+  border: 1px solid var(--card-border-clr);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+}
+input {
+  padding: 0.3rem 1rem;
+}
+button {
+  padding: 0rem 2rem;
+  background-color: var(--links-hover-clr);
+  color: var(--whites-clr);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+@container (width <= 872px) {
+  .destination {
+    flex-direction: column;
+  }
+  .search {
+    flex-direction: column;
+  }
+  button {
+    padding: auto;
+  }
 }
