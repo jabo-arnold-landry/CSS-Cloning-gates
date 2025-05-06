@@ -22,6 +22,7 @@ nav {
 .links {
   display: inline-flex;
   gap: 13px;
+  transition: all 0.3ms 0.1ms ease-in-out;
   & a {
     color: var(--links-clr);
     text-decoration: none;
@@ -37,6 +38,30 @@ nav {
     border-radius: 50px;
   }
 }
+.links a:hover {
+  color: var(--links-hover-clr);
+}
 svg {
   width: 20px;
+}
+
+.hero-section {
+  overflow: hidden;
+  height: 100vh;
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2025/03/24/VRBO_APFT2_BARCELONA_THERIN_HOUSE_2_4605_1.png?impolicy=fcrop&amp;w=1920&amp;h=580&amp;q=medium");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  & .overlay {
+    /* max-width: 98rem;
+    margin: 0 auto;
+    height: 100vh; */
+    background-color: black;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+  }
+}
+.destinations {
+  columns: var(--whites-clr);
 }
