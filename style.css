@@ -7,8 +7,8 @@
     Helvetica Neue, Arial, sans-serif;
   --card-background: #f7f7f8;
   --card-border-clr: #dfe0e4;
-  --egds-type-style-headline-font-name: "Centra No2", "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  --secondary-font-family: Centra No2, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -77,6 +77,7 @@ svg {
 .destination {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   background-color: var(--card-background);
   border-radius: 0.5rem;
   margin: 0 2rem;
@@ -115,4 +116,34 @@ button {
   button {
     padding: auto;
   }
+}
+.message-section {
+  background-color: #0c0e1c;
+  margin: 3rem 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  & svg {
+    width: 50px;
+    background-color: #1668e3;
+    padding: 0.6rem;
+    border-radius: 5rem;
+  }
+  & p {
+    font-size: 1rem;
+    font-family: var(--secondary-font-family);
+    color: white;
+  }
+  & button {
+    background-color: #135694;
+    padding: 0.5rem 1rem;
+  }
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
