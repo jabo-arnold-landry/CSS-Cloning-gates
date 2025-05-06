@@ -180,3 +180,81 @@ button {
     text-transform: capitalize;
   }
 }
+.listing-container {
+  background-color: white;
+  border-radius: 10px;
+  width: 18rem;
+  font-family: var(--primary-color);
+  line-height: 1rem;
+  margin: 2rem 4rem;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.rating-title-section {
+  margin-top: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score {
+  background-color: #2ecc71;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.reviews {
+  color: #333;
+  font-weight: bold;
+}
+
+.price-section {
+  margin-top: 20px;
+}
+
+.price-section h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-family: var(--primary-color);
+}
+
+.price-section p {
+  color: #666;
+  font-size: 14px;
+  font-family: var(--primary-color);
+}
+.weekend-rooms {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+.weekend-heading h2 {
+  font-size: 28px;
+  font-family: var(--primary-color);
+  color: #191e3b;
+}
+
+.weekend-heading p {
+  font-family: var(--primary-color);
+  color: #191e3b;
+  font-size: 14px;
+}
+.weekend-heading {
+  line-height: 0.5rem;
+  padding-left: 12rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
