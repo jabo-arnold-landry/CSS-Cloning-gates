@@ -98,7 +98,7 @@ input {
   padding: 0.3rem 1rem;
 }
 button {
-  padding: 0rem 2rem;
+  padding: 1rem 1rem;
   background-color: var(--links-hover-clr);
   color: var(--whites-clr);
   border: none;
@@ -112,9 +112,6 @@ button {
   }
   .search {
     flex-direction: column;
-  }
-  button {
-    padding: auto;
   }
 }
 .message-section {
@@ -146,4 +143,40 @@ button {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.accomodation {
+  margin: 0 3rem;
+  & h2 {
+    font-family: var(--secondary-font-family);
+    color: var(--links-clr);
+    margin-bottom: 1rem;
+  }
+}
+.cards {
+  display: flex;
+  gap: 3rem;
+
+  & .card {
+    display: inline-block;
+    position: relative;
+  }
+  & img {
+    max-width: 14rem;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.6);
+    border-radius: 1rem;
+    position: relative;
+  }
+  & p {
+    position: absolute;
+    top: 85%;
+    left: 18%;
+    /* transform: translate(-50%, -50%); */
+    color: white;
+    font-family: var(--secondary-font-family);
+    font-weight: 500;
+    text-transform: capitalize;
+  }
 }
