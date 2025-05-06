@@ -1,3 +1,42 @@
+:root {
+  --whites-clr: #fff;
+  --links-clr: #191e3b;
+  --links-hover-clr: #1668e3;
+  --primary-font: 14px;
+  --font-family: Centra No2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: var(--whites-clr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20rem;
+  margin: 1rem 0;
+}
+.links {
+  display: inline-flex;
+  gap: 13px;
+  & a {
+    color: var(--links-clr);
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  & .download-section {
+    display: inline-flex;
+    gap: 3px;
+    border: 1px solid #dfe0e4;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+  }
+}
 svg {
-  width: 30px;
+  width: 20px;
 }
